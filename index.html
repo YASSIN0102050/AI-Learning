@@ -22,16 +22,13 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;overflow-x:hidden}
 
-/* ── PARTICLES CANVAS ── */
 #bgc{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.45}
 
-/* ── AMBIENT GLOWS ── */
 .glow-1{position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,106,247,.15),transparent 70%);top:-100px;left:-100px;pointer-events:none;z-index:0;animation:drift1 18s ease-in-out infinite}
 .glow-2{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,.1),transparent 70%);bottom:-80px;right:-80px;pointer-events:none;z-index:0;animation:drift2 22s ease-in-out infinite}
 @keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,40px)}}
 @keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,-30px)}}
 
-/* ── HEADER ── */
 .site-header{position:relative;z-index:10;text-align:center;padding:4rem 1.5rem 2.5rem;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(124,106,247,.07) 0%,transparent 100%)}
 .logo-row{display:inline-flex;align-items:center;gap:16px;margin-bottom:12px}
 .logo-gem{width:52px;height:52px;border-radius:16px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 0 40px rgba(124,106,247,.5),0 0 80px rgba(124,106,247,.2);animation:pulse-gem 3s ease-in-out infinite}
@@ -39,14 +36,12 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-
 .site-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.03em;background:linear-gradient(135deg,#fff 20%,var(--accent) 55%,var(--accent2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .site-tagline{color:var(--muted);font-size:.95rem;font-weight:300;max-width:560px;margin:.5rem auto 0;line-height:1.6}
 
-/* ── XP BAR (header) ── */
 .xp-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:18px}
 .xp-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(124,106,247,.12);border:1px solid rgba(124,106,247,.25);border-radius:99px;padding:6px 14px;font-size:.82rem;font-weight:600;color:var(--accent)}
 .xp-bar-wrap{width:200px;height:6px;background:var(--border);border-radius:99px;overflow:hidden}
 .xp-bar-fill{height:100%;border-radius:99px;background:var(--grad);transition:width .8s cubic-bezier(.4,0,.2,1)}
 .streak-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(249,115,22,.12);border:1px solid rgba(249,115,22,.25);border-radius:99px;padding:6px 14px;font-size:.82rem;font-weight:600;color:var(--accent3)}
 
-/* ── NAV ── */
 .top-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px;padding:8px 16px;background:rgba(7,7,14,.9);backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid var(--border)}
 .nav-pill{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:10px;border:none;font-family:'Outfit',sans-serif;font-size:.84rem;font-weight:500;color:var(--muted);background:transparent;cursor:pointer;transition:all .2s;white-space:nowrap}
 .nav-pill:hover{color:var(--text);background:rgba(255,255,255,.05)}
@@ -57,22 +52,18 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-
 #user-info{display:none;align-items:center;gap:10px}
 #user-greet{font-size:.82rem;color:var(--muted2);font-weight:500}
 
-/* ── PAGES ── */
 .page{display:none;position:relative;z-index:1;animation:pgIn .35s ease}
 .page.active{display:block}
 @keyframes pgIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── INNER ── */
 .inner{max-width:1120px;margin:0 auto;padding:2rem 24px 6rem}
 
-/* ── CARDS ── */
 .card{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;transition:border-color .3s}
 .card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(124,106,247,.4),transparent)}
 .card:hover{border-color:var(--border2)}
 .card h2{font-family:'DM Serif Display',serif;font-size:1.45rem;margin-bottom:20px;display:flex;align-items:center;gap:10px}
 .card h2 .ico{width:34px;height:34px;border-radius:9px;font-size:16px;display:flex;align-items:center;justify-content:center;background:rgba(124,106,247,.14);border:1px solid rgba(124,106,247,.22);flex-shrink:0}
 
-/* ── HERO STATS (home) ── */
 .hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
 @media(max-width:700px){.hero-grid{grid-template-columns:repeat(2,1fr)}}
 .hero-stat{background:var(--s1);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:center;position:relative;overflow:hidden;transition:all .3s}
@@ -81,7 +72,6 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-
 .hs-val{font-family:'DM Serif Display',serif;font-size:2.2rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
 .hs-lbl{font-size:.72rem;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.07em}
 
-/* ── COURSE CARDS ── */
 .course-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px}
 @media(max-width:768px){.course-grid{grid-template-columns:1fr}}
 
@@ -92,7 +82,6 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-
 .done-badge{display:none;position:absolute;top:10px;right:10px;z-index:5;background:rgba(74,222,128,.18);color:var(--success);border:1px solid rgba(74,222,128,.3);padding:4px 12px;border-radius:99px;font-size:.74rem;font-weight:600;letter-spacing:.04em}
 .course-card.done .done-badge{display:block}
 
-/* ── VIDEO THUMBNAIL ── */
 .vid-thumb{position:relative;width:100%;padding-bottom:56.25%;background:#000;cursor:pointer;overflow:hidden;flex-shrink:0}
 .vid-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .3s}
 .course-card:hover .vid-thumb img{transform:scale(1.04);filter:brightness(.85)}
@@ -112,7 +101,6 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-
 .course-meta span{font-size:.72rem;color:var(--muted);display:flex;align-items:center;gap:4px}
 .course-actions{padding:14px 20px 18px;display:flex;flex-direction:column;gap:8px}
 
-/* ── SEARCH BAR ── */
 .search-bar{position:relative;margin-bottom:24px}
 .search-bar input{background:var(--s1);border:1px solid var(--border);border-radius:14px;color:var(--text);font-family:'Outfit',sans-serif;font-size:.95rem;padding:13px 44px 13px 48px;width:100%;outline:none;transition:all .25s}
 .search-bar input:focus{border-color:rgba(124,106,247,.5);box-shadow:0 0 0 3px rgba(124,106,247,.1)}
@@ -123,29 +111,24 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-
 .fpill:hover{border-color:rgba(124,106,247,.35);color:var(--text)}
 .fpill.on{background:rgba(124,106,247,.14);border-color:rgba(124,106,247,.35);color:var(--accent)}
 
-/* ── SECTION HEADING ── */
 .sec-head{margin:2.8rem 0 1.5rem;display:flex;align-items:center;gap:16px}
 .sec-head h2{font-family:'DM Serif Display',serif;font-size:1.9rem;letter-spacing:-.02em;white-space:nowrap}
 .sec-rule{flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent)}
 
-/* ── PATHWAY ── */
 .pathway-banner{background:linear-gradient(135deg,rgba(124,106,247,.1),rgba(34,211,238,.06));border:1px solid rgba(124,106,247,.2);border-radius:16px;padding:28px;text-align:center;margin:28px 0}
 .pathway-banner h3{font-family:'DM Serif Display',serif;font-size:1.35rem;margin-bottom:10px}
 .pathway-banner p{color:var(--muted);font-size:.9rem;line-height:1.8}
 .pa{color:var(--accent);font-weight:700}
 .pa-arrow{color:var(--muted);margin:0 4px}
 
-/* ── GRID UTILS ── */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:640px){.grid-2{grid-template-columns:1fr}}
 
-/* ── INPUTS ── */
 input,textarea,select{background:var(--s2);border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:'Outfit',sans-serif;font-size:.9rem;padding:10px 14px;outline:none;width:100%;transition:all .2s}
 input:focus,textarea:focus,select:focus{border-color:rgba(124,106,247,.5);box-shadow:0 0 0 3px rgba(124,106,247,.1)}
 input::placeholder,textarea::placeholder{color:var(--muted)}
 label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.09em;margin-bottom:6px}
 
-/* ── BUTTONS ── */
 .btn{border:none;border-radius:10px;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;padding:10px 20px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:7px}
 .btn-primary{background:linear-gradient(135deg,var(--accent),#6558e8);color:#fff;box-shadow:0 4px 20px rgba(124,106,247,.3)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(124,106,247,.5)}
@@ -160,11 +143,9 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
 .btn-danger:hover{background:rgba(248,113,113,.2)}
 .btn-sm{padding:6px 14px;font-size:.81rem}
 
-/* ── ADD ROW ── */
 .add-row{display:grid;grid-template-columns:1fr 110px 120px auto;gap:10px;align-items:end;margin-top:16px}
 @media(max-width:600px){.add-row{grid-template-columns:1fr 1fr}.add-row .btn{grid-column:1/-1}}
 
-/* ── SUBJECT ROWS ── */
 .sub-row{display:flex;align-items:center;padding:12px 16px;border:1px solid var(--border);border-radius:12px;margin-bottom:8px;background:var(--s2);transition:all .2s;animation:slideIn .3s ease}
 @keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
 .sub-row:hover{border-color:rgba(124,106,247,.3)}
@@ -176,22 +157,18 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
 .gD{background:rgba(248,113,113,.15);color:var(--danger);border:1px solid rgba(248,113,113,.2)}
 .gF{background:rgba(248,113,113,.2);color:var(--danger);border:1px solid rgba(248,113,113,.3)}
 
-/* ── STATS BAR ── */
 .stats-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
 .stat-box{background:var(--s2);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center}
 .stat-val{font-family:'DM Serif Display',serif;font-size:2rem;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat-lbl{font-size:.71rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
 
-/* ── TABLE ── */
 .sched-table{width:100%;border-collapse:collapse;font-size:.875rem}
 .sched-table th{background:var(--s2);color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.09em;padding:10px 14px;border-bottom:1px solid var(--border);text-align:left}
 .sched-table td{padding:11px 14px;border-bottom:1px solid var(--border)}
 .sched-table tr:last-child td{border-bottom:none}
 
-/* ── CHART ── */
 .chart-wrap{position:relative;height:260px;margin-top:24px}
 
-/* ── QUIZ ── */
 .qx-q{font-size:1.05rem;font-weight:500;line-height:1.6;margin-bottom:20px;padding:18px;background:var(--s2);border-radius:12px;border-left:3px solid var(--accent)}
 .qx-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
 @media(max-width:600px){.qx-opts{grid-template-columns:1fr}}
@@ -201,7 +178,10 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
 .qx-opt.wrong{background:rgba(248,113,113,.12);border-color:var(--danger);color:var(--danger)}
 .qx-score{font-family:'DM Mono',monospace;font-size:.82rem;color:var(--muted);margin-bottom:16px}
 
-/* ── FLASHCARDS ── */
+/* Arabic RTL support for quiz options */
+.qx-opt.rtl{text-align:right;direction:rtl}
+.qx-q.rtl{direction:rtl;text-align:right;border-left:none;border-right:3px solid var(--accent)}
+
 .fc-scene{perspective:1400px;height:210px;margin:20px 0;cursor:pointer;user-select:none}
 .fc-card{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.4,0,.2,1)}
 .fc-card.flipped{transform:rotateY(180deg)}
@@ -214,7 +194,9 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
 .fc-nav{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:8px}
 .fc-ctr{font-family:'DM Mono',monospace;font-size:.82rem;color:var(--muted)}
 
-/* ── POMODORO ── */
+/* RTL flashcard text */
+.fc-txt.rtl{direction:rtl;text-align:right}
+
 .pom-wrap{text-align:center;padding:24px 16px}
 .pom-ring-el{width:180px;height:180px;margin:0 auto 20px;position:relative}
 .pom-ring-el svg{transform:rotate(-90deg)}
@@ -228,18 +210,15 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
 .pom-dot{width:10px;height:10px;border-radius:50%;background:var(--border);transition:all .35s}
 .pom-dot.done{background:var(--accent);box-shadow:0 0 10px var(--accent)}
 
-/* ── SUMMARY ── */
 #sum-out{margin-top:16px;padding:20px;background:var(--s2);border-radius:12px;border:1px solid var(--border);font-size:.9rem;line-height:1.75;white-space:pre-wrap;min-height:40px}
 .terms{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .term{background:rgba(124,106,247,.12);border:1px solid rgba(124,106,247,.25);color:var(--accent);font-family:'DM Mono',monospace;font-size:.74rem;padding:4px 10px;border-radius:6px;cursor:default;transition:all .2s}
 .term:hover{background:rgba(124,106,247,.25)}
 
-/* ── AI BUBBLE ── */
 .ai-bub{background:var(--s2);border:1px solid var(--border);border-radius:12px 12px 12px 4px;padding:14px 18px;font-size:.875rem;line-height:1.7;margin-top:14px;animation:fadeUp .4s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .ai-lbl{font-size:.67rem;text-transform:uppercase;letter-spacing:.11em;color:var(--accent);margin-bottom:8px;font-weight:600}
 
-/* ── GOALS ── */
 .goal-row{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;background:var(--s2);animation:slideIn .3s ease;transition:border-color .2s}
 .goal-row:hover{border-color:rgba(124,106,247,.25)}
 .g-chk{width:22px;height:22px;border-radius:7px;border:2px solid var(--border);cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
@@ -248,18 +227,17 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
 .g-txt{flex:1;font-size:.9rem}
 .g-txt.done{text-decoration:line-through;color:var(--muted)}
 
-/* ── PROGRESS BAR ── */
 .prog-bar{height:4px;background:var(--border);border-radius:99px;margin-top:16px;overflow:hidden}
 .prog-fill{height:100%;border-radius:99px;background:var(--grad);transition:width .6s ease}
 
-/* ── DIVIDER ── */
 .div{height:1px;background:var(--border);margin:20px 0}
 
-/* ── EMPTY ── */
 .empty{text-align:center;padding:40px;color:var(--muted)}
 .empty .e-ico{font-size:2.6rem;margin-bottom:10px}
 
-/* ── VIDEO LIGHTBOX ── */
+/* ── ARABIC LANGUAGE INDICATOR ── */
+.lang-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(249,115,22,.1);border:1px solid rgba(249,115,22,.2);color:var(--accent3);border-radius:99px;padding:3px 10px;font-size:.72rem;font-weight:600;margin-bottom:12px}
+
 #vbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:5000;display:none;align-items:center;justify-content:center;padding:1rem;animation:fadeIn .25s ease}
 #vbox.open{display:flex}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -271,7 +249,6 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
 .vbox-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
 .vbox-links{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
 
-/* ── MODALS ── */
 .modal{position:fixed;inset:0;background:rgba(7,7,14,.92);display:none;align-items:center;justify-content:center;z-index:3000;padding:1rem}
 .modal.open{display:flex}
 .modal-box{background:var(--s1);border:1px solid var(--border);border-radius:24px;width:100%;max-width:700px;max-height:92vh;overflow-y:auto;box-shadow:0 40px 80px rgba(0,0,0,.7);animation:modalPop .3s cubic-bezier(.34,1.56,.64,1)}
@@ -289,28 +266,21 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
 #m-prog{font-size:.9rem;margin-bottom:10px;color:var(--accent);font-family:'DM Mono',monospace;opacity:.8}
 #m-qtext{font-size:1.1rem;line-height:1.55;margin-bottom:20px;font-weight:500}
 
-/* ── LOGIN MODAL SPECIFIC ── */
 .login-sep{text-align:center;color:var(--muted);font-size:.82rem;margin:16px 0;position:relative}
 .login-sep::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:var(--border)}
 .login-sep span{background:var(--s1);padding:0 12px;position:relative}
 
-
-
-/* ── TOAST ── */
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(60px);opacity:0;background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:12px 22px;font-size:.85rem;box-shadow:0 8px 32px rgba(0,0,0,.5);z-index:9999;transition:all .35s;white-space:nowrap;pointer-events:none}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:99px}
 
-/* ── FOOTER ── */
 .site-footer{background:rgba(0,0,0,.5);border-top:1px solid var(--border);text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem;position:relative;z-index:1}
 .site-footer strong{color:var(--accent)}
 
 @media(max-width:480px){
-  #chat-win{width:calc(100vw - 24px);right:12px}
   .site-title{font-size:1.8rem}
 }
 </style>
@@ -321,7 +291,6 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
 <div class="glow-1"></div>
 <div class="glow-2"></div>
 
-<!-- ══ HEADER ══ -->
 <header class="site-header">
   <div class="logo-row">
     <div class="logo-gem">🎓</div>
@@ -335,7 +304,6 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
   </div>
 </header>
 
-<!-- ══ NAV ══ -->
 <nav class="top-nav" id="top-nav">
   <button class="nav-pill active" data-page="grades" id="nav-grades">
     <span class="dot"></span>Grades &amp; Schedule
@@ -365,11 +333,10 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
     <button class="btn btn-sm btn-danger" id="logout-btn">Logout</button>
   </div>
   <button class="btn btn-sm btn-primary" id="login-btn">Login / Sign Up</button>
+  <button class="btn btn-sm" id="reset-data-btn" title="Erase all saved data" style="background:rgba(248,113,113,.08);color:var(--danger);border:1px solid rgba(248,113,113,.18);font-size:.78rem;padding:6px 12px;">🗑 Reset</button>
 </nav>
 
-<!-- ══════════════════════════════════════
-     PAGE: GRADES & SCHEDULE
-══════════════════════════════════════ -->
+<!-- PAGE: GRADES & SCHEDULE -->
 <div id="page-grades" class="page active">
   <div class="inner">
     <div class="hero-grid">
@@ -378,7 +345,6 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
       <div class="hero-stat"><div class="hs-val" id="hs-best">—</div><div class="hs-lbl">Strongest Subject</div></div>
       <div class="hero-stat"><div class="hs-val" id="hs-hrs">0h</div><div class="hs-lbl">Rec. Weekly Hours</div></div>
     </div>
-
     <div class="card">
       <h2><span class="ico">📊</span> Your Subjects &amp; Grades</h2>
       <div id="grades-list"></div>
@@ -396,7 +362,6 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
         <button class="btn btn-primary" id="add-sub-btn" style="margin-top:22px">＋ Add</button>
       </div>
     </div>
-
     <div id="stats-sec" style="display:none">
       <div class="stats-bar" id="stats-bar"></div>
       <div class="card">
@@ -412,15 +377,13 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     PAGE: SUMMARIZER
-══════════════════════════════════════ -->
+<!-- PAGE: SUMMARIZER -->
 <div id="page-summarizer" class="page">
   <div class="inner">
     <div class="card">
       <h2><span class="ico">📝</span> Lesson Summarizer</h2>
-      <label>Paste your lesson, article or notes below</label>
-      <textarea id="sum-in" rows="10" placeholder="Paste lesson content here — the engine extracts key sentences, surfaces important terms and gives you reading stats."></textarea>
+      <label>Paste your lesson, article or notes below — supports English &amp; Arabic 🌐</label>
+      <textarea id="sum-in" rows="10" placeholder="الصق المحتوى هنا باللغة العربية أو الإنجليزية — سيتم اكتشاف اللغة تلقائياً&#10;&#10;Paste lesson content here in Arabic or English — language is auto-detected."></textarea>
       <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
         <button class="btn btn-primary" id="sum-btn">✨ Summarize</button>
         <button class="btn btn-secondary" id="sum-clear">Clear</button>
@@ -428,6 +391,7 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
     </div>
     <div class="card" id="sum-card" style="display:none">
       <h2><span class="ico">💡</span> Summary</h2>
+      <div id="sum-lang-badge"></div>
       <div id="sum-out"></div>
       <div class="div"></div>
       <div class="ai-lbl" style="margin-bottom:8px">Key Terms</div>
@@ -439,15 +403,13 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     PAGE: QUIZ ME
-══════════════════════════════════════ -->
+<!-- PAGE: QUIZ ME -->
 <div id="page-quiz-ai" class="page">
   <div class="inner">
     <div class="card">
       <h2><span class="ico">🧠</span> Quiz Generator</h2>
-      <label>Paste text to quiz yourself on</label>
-      <textarea id="qx-in" rows="5" placeholder="e.g. Photosynthesis is the process by which plants use sunlight, water and carbon dioxide to produce oxygen and energy in the form of sugar..."></textarea>
+      <label>Paste text to quiz yourself on — supports English &amp; Arabic 🌐</label>
+      <textarea id="qx-in" rows="5" placeholder="الصق النص هنا باللغة العربية أو الإنجليزية&#10;&#10;e.g. Photosynthesis is the process by which plants use sunlight..."></textarea>
       <button class="btn btn-primary" id="quiz-gen-btn" style="margin-top:16px">⚡ Generate Quiz</button>
     </div>
     <div id="qx-area" class="card" style="display:none">
@@ -460,15 +422,13 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     PAGE: FLASHCARDS
-══════════════════════════════════════ -->
+<!-- PAGE: FLASHCARDS -->
 <div id="page-flashcards" class="page">
   <div class="inner">
     <div class="card">
       <h2><span class="ico">🃏</span> Flashcard Generator</h2>
-      <label>Paste text to create flashcards from</label>
-      <textarea id="fc-in" rows="5" placeholder="Paste educational content and we'll extract key concept → definition pairs..."></textarea>
+      <label>Paste text to create flashcards — supports English &amp; Arabic 🌐</label>
+      <textarea id="fc-in" rows="5" placeholder="الصق المحتوى التعليمي هنا باللغة العربية أو الإنجليزية&#10;&#10;Paste educational content and we'll extract key concept → definition pairs..."></textarea>
       <button class="btn btn-primary" id="fc-gen-btn" style="margin-top:16px">🃏 Create Flashcards</button>
     </div>
     <div id="fc-area" class="card" style="display:none">
@@ -476,12 +436,12 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
       <div class="fc-scene" id="fc-scene">
         <div class="fc-card" id="fc-card">
           <div class="fc-face fc-front">
-            <div class="fc-lbl">Term</div>
+            <div class="fc-lbl">Term / المصطلح</div>
             <div class="fc-txt" id="fc-front-txt"></div>
-            <div class="fc-hint">Click or press Space to reveal</div>
+            <div class="fc-hint">Click or press Space to reveal · اضغط للكشف</div>
           </div>
           <div class="fc-face fc-back">
-            <div class="fc-lbl">Definition</div>
+            <div class="fc-lbl">Definition / التعريف</div>
             <div class="fc-txt" id="fc-back-txt"></div>
           </div>
         </div>
@@ -496,15 +456,13 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     PAGE: GOALS
-══════════════════════════════════════ -->
+<!-- PAGE: GOALS -->
 <div id="page-goals" class="page">
   <div class="inner">
     <div class="card">
       <h2><span class="ico">🎯</span> Study Goals</h2>
       <div style="display:flex;gap:10px">
-        <input type="text" id="new-goal" placeholder="Add a study goal..." style="flex:1">
+        <input type="text" id="new-goal" placeholder="Add a study goal...">
         <button class="btn btn-primary" id="add-goal-btn">＋ Add</button>
       </div>
       <div class="div"></div>
@@ -515,9 +473,7 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     PAGE: POMODORO
-══════════════════════════════════════ -->
+<!-- PAGE: POMODORO -->
 <div id="page-pomodoro" class="page">
   <div class="inner">
     <div class="card">
@@ -562,13 +518,9 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     PAGE: COURSES
-══════════════════════════════════════ -->
+<!-- PAGE: COURSES -->
 <div id="page-courses" class="page">
   <div class="inner">
-
-    <!-- search -->
     <div class="search-bar">
       <span class="search-icon">🔍</span>
       <input type="text" id="course-search" placeholder="Search courses — Python, React, SQL...">
@@ -584,10 +536,8 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
       <button class="fpill" data-filter="career">Career</button>
     </div>
 
-    <!-- FUNDAMENTALS -->
     <div class="sec-head" data-section="fundamentals"><h2>Programming Fundamentals</h2><div class="sec-rule"></div></div>
     <div class="course-grid" id="grid-fundamentals">
-
       <div class="course-card" data-tags="beginner web fundamentals" data-vid="mU6anWqZJcc" data-title="HTML &amp; CSS Full Course – freeCodeCamp">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="mU6anWqZJcc" data-title="HTML &amp; CSS Full Course – freeCodeCamp">
@@ -599,15 +549,12 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip">Beginner</span>
           <h3>HTML &amp; CSS</h3>
           <p>Structure &amp; styling — build beautiful, responsive websites from scratch.</p>
-          <div class="course-meta">
-            <span>🎓 Traversy Media</span><span>⭐ 4.9</span><span>👥 2.1M views</span>
-          </div>
+          <div class="course-meta"><span>🎓 Traversy Media</span><span>⭐ 4.9</span><span>👥 2.1M views</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="html">I've Finished This ✅</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="beginner web fundamentals" data-vid="W6NZfCO5SIk" data-title="JavaScript Full Course for Beginners">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="W6NZfCO5SIk" data-title="JavaScript Full Course">
@@ -619,15 +566,12 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip">Beginner</span>
           <h3>JavaScript – Basics</h3>
           <p>Variables, functions, DOM &amp; events — the language of the web.</p>
-          <div class="course-meta">
-            <span>🎓 freeCodeCamp</span><span>⭐ 4.9</span><span>👥 5.8M views</span>
-          </div>
+          <div class="course-meta"><span>🎓 freeCodeCamp</span><span>⭐ 4.9</span><span>👥 5.8M views</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="javascript-basics">I've Finished This ✅</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="beginner fundamentals" data-vid="RGOj5yH7evk" data-title="Git &amp; GitHub Crash Course">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="RGOj5yH7evk" data-title="Git and GitHub Crash Course">
@@ -636,24 +580,19 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="vid-dur">~1h</span>
         </div>
         <div class="course-body">
-          <span class="level-chip level-chip" style="background:rgba(34,211,238,.14);color:var(--accent2);border-color:rgba(34,211,238,.25)">Beginner → Intermediate</span>
+          <span class="level-chip" style="background:rgba(34,211,238,.14);color:var(--accent2);border-color:rgba(34,211,238,.25)">Beginner → Intermediate</span>
           <h3>Git &amp; GitHub</h3>
           <p>Version control — essential for every professional developer.</p>
-          <div class="course-meta">
-            <span>🎓 Traversy Media</span><span>⭐ 4.8</span><span>👥 3.2M views</span>
-          </div>
+          <div class="course-meta"><span>🎓 Traversy Media</span><span>⭐ 4.8</span><span>👥 3.2M views</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="git">I've Finished This ✅</button>
         </div>
       </div>
-
     </div>
 
-    <!-- CORE LANGUAGES -->
     <div class="sec-head"><h2>Core Programming Languages</h2><div class="sec-rule"></div></div>
     <div class="course-grid" id="grid-languages">
-
       <div class="course-card" id="card-python" data-tags="beginner intermediate backend" data-vid="rfscVS0vtbw" data-title="Python for Beginners – Full Course">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="rfscVS0vtbw" data-title="Python for Beginners – Full Course">
@@ -665,16 +604,13 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip level-hot">🔥 Most Popular 2026</span>
           <h3>Python</h3>
           <p>AI, data, automation &amp; web backends — the most in-demand language.</p>
-          <div class="course-meta">
-            <span>🎓 freeCodeCamp</span><span>⭐ 4.9</span><span>👥 42M views</span>
-          </div>
+          <div class="course-meta"><span>🎓 freeCodeCamp</span><span>⭐ 4.9</span><span>👥 42M views</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="python">I've Finished This Playlist ✅</button>
           <button class="btn btn-cyan quiz-btn" data-lang="python" style="display:none">🏆 Take 30-Question Professional Quiz</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="intermediate advanced web" data-vid="30LWjhZzg50" data-title="TypeScript Full Course for Beginners – freeCodeCamp">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="30LWjhZzg50" data-title="TypeScript Full Course for Beginners – freeCodeCamp">
@@ -686,15 +622,12 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip">High Demand</span>
           <h3>TypeScript</h3>
           <p>Type-safe JavaScript — standard in serious frontend &amp; full-stack projects.</p>
-          <div class="course-meta">
-            <span>🎓 Jack Herrington</span><span>⭐ 4.8</span><span>👥 1.4M views</span>
-          </div>
+          <div class="course-meta"><span>🎓 Jack Herrington</span><span>⭐ 4.8</span><span>👥 1.4M views</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="typescript">I've Finished This ✅</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="intermediate advanced backend" data-vid="eIrMbAQSU34" data-title="Java Full Course">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="eIrMbAQSU34" data-title="Java Full Course">
@@ -706,15 +639,12 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip">Enterprise / Android</span>
           <h3>Java</h3>
           <p>Backend systems, Android apps, big-company interviews — timeless &amp; stable.</p>
-          <div class="course-meta">
-            <span>🎓 freeCodeCamp</span><span>⭐ 4.7</span><span>👥 12M views</span>
-          </div>
+          <div class="course-meta"><span>🎓 freeCodeCamp</span><span>⭐ 4.7</span><span>👥 12M views</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="java">I've Finished This ✅</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="advanced backend" data-vid="8jLOx1hD3_o" data-title="C++ Tutorial for Beginners – Full Course">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="8jLOx1hD3_o" data-title="C++ Tutorial – Full Course">
@@ -726,15 +656,12 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip">Systems / Games</span>
           <h3>C++</h3>
           <p>Performance-critical software, game engines &amp; embedded systems.</p>
-          <div class="course-meta">
-            <span>🎓 freeCodeCamp</span><span>⭐ 4.8</span>
-          </div>
+          <div class="course-meta"><span>🎓 freeCodeCamp</span><span>⭐ 4.8</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="cpp">I've Finished This ✅</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="intermediate advanced backend" data-vid="un6ZyFkqFKo" data-title="Go Programming – Full Course">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="un6ZyFkqFKo" data-title="Go Programming – Full Course">
@@ -746,15 +673,12 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip level-new">New &amp; Growing</span>
           <h3>Go (Golang)</h3>
           <p>Fast, concurrent cloud-native backends — rising fast in the industry.</p>
-          <div class="course-meta">
-            <span>🎓 freeCodeCamp</span><span>⭐ 4.9</span><span>👥 3.1M views</span>
-          </div>
+          <div class="course-meta"><span>🎓 freeCodeCamp</span><span>⭐ 4.9</span><span>👥 3.1M views</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="go">I've Finished This ✅</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="advanced backend" data-vid="BpPEoZW5IiY" data-title="Rust Programming Full Course – freeCodeCamp">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="BpPEoZW5IiY" data-title="Rust Programming Full Course – freeCodeCamp">
@@ -766,21 +690,16 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip">Future-Proof</span>
           <h3>Rust</h3>
           <p>Memory-safe systems programming — replacing C++ in critical areas.</p>
-          <div class="course-meta">
-            <span>🎓 freeCodeCamp</span><span>⭐ 4.9</span>
-          </div>
+          <div class="course-meta"><span>🎓 freeCodeCamp</span><span>⭐ 4.9</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="rust">I've Finished This ✅</button>
         </div>
       </div>
-
     </div>
 
-    <!-- FRAMEWORKS -->
     <div class="sec-head"><h2>Modern Frameworks &amp; Full-Stack</h2><div class="sec-rule"></div></div>
     <div class="course-grid" id="grid-frameworks">
-
       <div class="course-card" data-tags="intermediate web frontend" data-vid="SqcY0GlETPk" data-title="React JS Full Course">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="SqcY0GlETPk" data-title="React JS Full Course">
@@ -792,15 +711,12 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip level-hot">🔥 Frontend Standard</span>
           <h3>React</h3>
           <p>Component-based UIs — used by Meta, Netflix, Airbnb &amp; thousands of startups.</p>
-          <div class="course-meta">
-            <span>🎓 freeCodeCamp</span><span>⭐ 4.9</span><span>👥 7.5M views</span>
-          </div>
+          <div class="course-meta"><span>🎓 freeCodeCamp</span><span>⭐ 4.9</span><span>👥 7.5M views</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="react">I've Finished This ✅</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="intermediate backend web" data-vid="Oe421EPjeBE" data-title="Node.js and Express – Full Course">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="Oe421EPjeBE" data-title="Node.js and Express – Full Course">
@@ -812,15 +728,12 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip">Backend JS</span>
           <h3>Node.js + Express</h3>
           <p>JavaScript on the server — full-stack with one language.</p>
-          <div class="course-meta">
-            <span>🎓 freeCodeCamp</span><span>⭐ 4.8</span><span>👥 5.2M views</span>
-          </div>
+          <div class="course-meta"><span>🎓 freeCodeCamp</span><span>⭐ 4.8</span><span>👥 5.2M views</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="nodejs">I've Finished This ✅</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="intermediate backend" data-vid="7S_tz1z_5bA" data-title="SQL Tutorial – Full Database Course">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="7S_tz1z_5bA" data-title="SQL Tutorial – Full Database Course">
@@ -832,15 +745,12 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <span class="level-chip">Databases</span>
           <h3>SQL &amp; Databases</h3>
           <p>Store &amp; query data — PostgreSQL, MySQL basics every developer needs.</p>
-          <div class="course-meta">
-            <span>🎓 freeCodeCamp</span><span>⭐ 4.9</span><span>👥 9.8M views</span>
-          </div>
+          <div class="course-meta"><span>🎓 freeCodeCamp</span><span>⭐ 4.9</span><span>👥 9.8M views</span></div>
         </div>
         <div class="course-actions">
           <button class="btn btn-success mark-done-btn" data-lang="sql">I've Finished This ✅</button>
         </div>
       </div>
-
     </div>
 
     <div class="pathway-banner">
@@ -854,13 +764,11 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
       </p>
     </div>
 
-    <!-- EARN -->
     <div class="sec-head"><h2>Earn from Code &amp; Find Jobs</h2><div class="sec-rule"></div></div>
     <div class="course-grid" id="grid-career">
-
       <div class="course-card" data-tags="career">
         <div class="done-badge">✓ Completed</div>
-        <div style="position:relative;width:100%;padding-bottom:56.25%;background:linear-gradient(135deg,rgba(124,106,247,.15),rgba(249,115,22,.1));display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <div style="position:relative;width:100%;padding-bottom:56.25%;background:linear-gradient(135deg,rgba(124,106,247,.15),rgba(249,115,22,.1));flex-shrink:0">
           <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px">
             <div style="font-size:2.8rem">💰</div>
             <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;text-align:center;color:var(--text)">Freelancing 101</div>
@@ -876,10 +784,9 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <button class="btn btn-success mark-done-btn" data-lang="freelancing">I've Watched This ✅</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="career">
         <div class="done-badge">✓ Completed</div>
-        <div style="position:relative;width:100%;padding-bottom:56.25%;background:linear-gradient(135deg,rgba(34,211,238,.1),rgba(124,106,247,.12));display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <div style="position:relative;width:100%;padding-bottom:56.25%;background:linear-gradient(135deg,rgba(34,211,238,.1),rgba(124,106,247,.12));flex-shrink:0">
           <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px">
             <div style="font-size:2.8rem">🌍</div>
             <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;text-align:center;color:var(--text)">Remote Jobs Guide</div>
@@ -895,7 +802,6 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <button class="btn btn-success mark-done-btn" data-lang="remote-jobs">I've Watched This ✅</button>
         </div>
       </div>
-
       <div class="course-card" data-tags="career web" data-vid="_xkSvufmjEs" data-title="How to Build a Developer Portfolio">
         <div class="done-badge">✓ Completed</div>
         <div class="vid-thumb" data-vid="_xkSvufmjEs" data-title="Developer Portfolio Guide">
@@ -912,18 +818,14 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
           <button class="btn btn-success mark-done-btn" data-lang="portfolio">I've Watched This ✅</button>
         </div>
       </div>
-
     </div>
-
   </div>
 </div>
 
-<!-- ══ FOOTER ══ -->
 <footer class="site-footer">
   © <span id="yr"></span> <strong>LearnAI</strong> &nbsp;·&nbsp; Built with passion for African youth developers
 </footer>
 
-<!-- ══ VIDEO LIGHTBOX ══ -->
 <div id="vbox">
   <div class="vbox-inner">
     <button class="vbox-close" id="vbox-close">✕</button>
@@ -938,7 +840,6 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
   </div>
 </div>
 
-<!-- ══ MODAL: LOGIN ══ -->
 <div id="m-login" class="modal">
   <div class="modal-box">
     <div class="modal-hd">
@@ -967,7 +868,6 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
   </div>
 </div>
 
-<!-- ══ MODAL: PYTHON QUIZ ══ -->
 <div id="m-quiz" class="modal">
   <div class="modal-box">
     <div class="modal-hd">
@@ -990,6 +890,34 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
 </div>
 
 
+<!-- ══ MODAL: RESET CONFIRM ══ -->
+<div id="m-reset" class="modal">
+  <div class="modal-box" style="max-width:440px">
+    <div class="modal-hd">
+      <h2 style="color:var(--danger)">⚠️ Reset All Data</h2>
+      <button class="modal-close" id="reset-close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="text-align:center;margin-bottom:24px">
+        <div style="font-size:3rem;margin-bottom:12px">🗑️</div>
+        <p style="color:var(--muted);font-size:.9rem;line-height:1.7">This will permanently erase <strong style="color:var(--text)">all your saved data</strong> including:</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:18px 0;text-align:left">
+          <div style="background:var(--s2);border:1px solid rgba(248,113,113,.2);border-radius:10px;padding:10px 14px;font-size:.82rem;color:var(--muted)">📊 Grades &amp; subjects</div>
+          <div style="background:var(--s2);border:1px solid rgba(248,113,113,.2);border-radius:10px;padding:10px 14px;font-size:.82rem;color:var(--muted)">⚡ XP &amp; streak</div>
+          <div style="background:var(--s2);border:1px solid rgba(248,113,113,.2);border-radius:10px;padding:10px 14px;font-size:.82rem;color:var(--muted)">🎯 Goals</div>
+          <div style="background:var(--s2);border:1px solid rgba(248,113,113,.2);border-radius:10px;padding:10px 14px;font-size:.82rem;color:var(--muted)">✅ Course completions</div>
+          <div style="background:var(--s2);border:1px solid rgba(248,113,113,.2);border-radius:10px;padding:10px 14px;font-size:.82rem;color:var(--muted)">⏱ Pomodoro stats</div>
+          <div style="background:var(--s2);border:1px solid rgba(248,113,113,.2);border-radius:10px;padding:10px 14px;font-size:.82rem;color:var(--muted)">👤 Login session</div>
+        </div>
+        <p style="color:var(--danger);font-size:.82rem;font-weight:600">This action cannot be undone.</p>
+      </div>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-secondary" id="reset-cancel-btn" style="flex:1;justify-content:center">Cancel</button>
+        <button class="btn" id="reset-confirm-btn" style="flex:1;justify-content:center;background:rgba(248,113,113,.18);color:var(--danger);border:1px solid rgba(248,113,113,.3);">🗑 Yes, Delete Everything</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="toast" id="toast"></div>
 
@@ -1024,9 +952,6 @@ label{display:block;font-size:.71rem;font-weight:600;color:var(--muted);text-tra
   draw();
 })();
 
-/* ═══════════════════════════════════════
-   FOOTER YEAR
-═══════════════════════════════════════ */
 document.getElementById('yr').textContent=new Date().getFullYear();
 
 /* ═══════════════════════════════════════
@@ -1084,24 +1009,16 @@ function addXP(amount,reason){
 updateXPUI();
 
 /* ═══════════════════════════════════════
-   LOGIN — FIXED
+   LOGIN
 ═══════════════════════════════════════ */
 let currentUser=null;
-
 function openModal(id){document.getElementById(id).classList.add('open');}
 function closeModal(id){document.getElementById(id).classList.remove('open');}
-
-// Close modal on backdrop click
 document.querySelectorAll('.modal').forEach(m=>{
   m.addEventListener('click',e=>{ if(e.target===m)m.classList.remove('open'); });
 });
-
-// Login button opens modal
 document.getElementById('login-btn').addEventListener('click',()=>openModal('m-login'));
-// Close buttons
 document.getElementById('login-close').addEventListener('click',()=>closeModal('m-login'));
-
-// Do login
 function doLogin(name){
   if(!name||!name.trim())return;
   const n=name.trim().split('@')[0];
@@ -1113,27 +1030,30 @@ function doLogin(name){
   showToast(`Welcome, ${displayName}! 🎉`,'success');
   addXP(50,'first login bonus');
 }
-
 document.getElementById('do-login-btn').addEventListener('click',()=>{
   const val=document.getElementById('m-name').value.trim();
   if(!val){document.getElementById('m-name').focus();showToast('Please enter your name or email','warn');return;}
   doLogin(val);
 });
-
-document.getElementById('m-name').addEventListener('keydown',e=>{
-  if(e.key==='Enter')document.getElementById('do-login-btn').click();
-});
-
-document.getElementById('guest-btn').addEventListener('click',()=>{
-  doLogin('Guest User');
-});
-
+document.getElementById('m-name').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('do-login-btn').click();});
+document.getElementById('guest-btn').addEventListener('click',()=>{doLogin('Guest User');});
 document.getElementById('logout-btn').addEventListener('click',()=>{
-  localStorage.removeItem('learnai-user');
-  currentUser=null;
+  localStorage.removeItem('learnai-user');currentUser=null;
   document.getElementById('user-info').style.display='none';
   document.getElementById('login-btn').style.display='inline-flex';
   showToast('Logged out. Progress saved locally.','info');
+});
+
+/* Reset all data */
+document.getElementById('reset-data-btn').addEventListener('click', () => openModal('m-reset'));
+document.getElementById('reset-close').addEventListener('click', () => closeModal('m-reset'));
+document.getElementById('reset-cancel-btn').addEventListener('click', () => closeModal('m-reset'));
+document.getElementById('reset-confirm-btn').addEventListener('click', () => {
+  const keys = ['learnai-xp','learnai-subs','learnai-goals','learnai-pom','learnai-user','learnai-visited'];
+  keys.forEach(k => localStorage.removeItem(k));
+  closeModal('m-reset');
+  showToast('All data erased. Starting fresh! 🌱', 'info');
+  setTimeout(() => location.reload(), 1200);
 });
 
 function updateLoginUI(){
@@ -1142,12 +1062,7 @@ function updateLoginUI(){
   document.getElementById('user-info').style.display='flex';
   document.getElementById('login-btn').style.display='none';
 }
-
-// restore session
-(function(){
-  const saved=localStorage.getItem('learnai-user');
-  if(saved){try{currentUser=JSON.parse(saved);updateLoginUI();}catch(e){}}
-})();
+(function(){const saved=localStorage.getItem('learnai-user');if(saved){try{currentUser=JSON.parse(saved);updateLoginUI();}catch(e){}}})();
 
 /* ═══════════════════════════════════════
    VIDEO LIGHTBOX
@@ -1156,31 +1071,20 @@ const vbox=document.getElementById('vbox');
 const vboxIframe=document.getElementById('vbox-iframe');
 const vboxTitle=document.getElementById('vbox-title');
 const vboxLink=document.getElementById('vbox-yt-link');
-
 function openVideo(vid,title){
   vboxIframe.src=`https://www.youtube.com/embed/${vid}?autoplay=1&rel=0&modestbranding=1`;
   vboxTitle.textContent=title||'Video Lesson';
   vboxLink.href=`https://www.youtube.com/watch?v=${vid}`;
-  vbox.classList.add('open');
-  document.body.style.overflow='hidden';
+  vbox.classList.add('open');document.body.style.overflow='hidden';
 }
 function closeVideo(){
-  vbox.classList.remove('open');
-  vboxIframe.src='';
-  document.body.style.overflow='';
+  vbox.classList.remove('open');vboxIframe.src='';document.body.style.overflow='';
 }
-
 document.getElementById('vbox-close').addEventListener('click',closeVideo);
 vbox.addEventListener('click',e=>{if(e.target===vbox)closeVideo();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeVideo();closeModal('m-quiz');}});
-
-// Attach to all vid-thumb elements
 document.querySelectorAll('.vid-thumb').forEach(thumb=>{
-  thumb.addEventListener('click',()=>{
-    const vid=thumb.dataset.vid;
-    const title=thumb.dataset.title;
-    if(vid)openVideo(vid,title);
-  });
+  thumb.addEventListener('click',()=>{const vid=thumb.dataset.vid;const title=thumb.dataset.title;if(vid)openVideo(vid,title);});
 });
 
 /* ═══════════════════════════════════════
@@ -1189,7 +1093,6 @@ document.querySelectorAll('.vid-thumb').forEach(thumb=>{
 const searchInput=document.getElementById('course-search');
 const clearBtn=document.getElementById('search-clear-btn');
 let activeFilter='all';
-
 function filterCourses(){
   const q=searchInput.value.toLowerCase().trim();
   clearBtn.style.display=q?'block':'none';
@@ -1201,24 +1104,18 @@ function filterCourses(){
     const matchFilter=activeFilter==='all'||tags.includes(activeFilter);
     card.style.display=(matchSearch&&matchFilter)?'flex':'none';
   });
-  // show/hide section headings
   document.querySelectorAll('.course-grid').forEach(grid=>{
     const vis=[...grid.querySelectorAll('.course-card')].some(c=>c.style.display!=='none');
     const prevSec=grid.previousElementSibling;
     if(prevSec&&prevSec.classList.contains('sec-head'))prevSec.style.display=vis?'flex':'none';
   });
 }
-
 searchInput.addEventListener('input',filterCourses);
 clearBtn.addEventListener('click',()=>{searchInput.value='';filterCourses();});
-
 document.getElementById('filter-pills').addEventListener('click',e=>{
-  const pill=e.target.closest('.fpill');
-  if(!pill)return;
+  const pill=e.target.closest('.fpill');if(!pill)return;
   document.querySelectorAll('.fpill').forEach(p=>p.classList.remove('on'));
-  pill.classList.add('on');
-  activeFilter=pill.dataset.filter;
-  filterCourses();
+  pill.classList.add('on');activeFilter=pill.dataset.filter;filterCourses();
 });
 
 /* ═══════════════════════════════════════
@@ -1230,28 +1127,18 @@ function markDone(btn){
   xpData.completedCourses.push(lang);
   localStorage.setItem('learnai-xp',JSON.stringify(xpData));
   const card=btn.closest('.course-card');
-  card.classList.add('done');
-  btn.style.display='none';
+  card.classList.add('done');btn.style.display='none';
   const qbtn=card.querySelector('.quiz-btn');
   if(qbtn)qbtn.style.display='inline-flex';
   addXP(100,'course completed 🎉');
 }
-
-document.querySelectorAll('.mark-done-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>markDone(btn));
-});
-document.querySelectorAll('.quiz-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>startCfcQuiz(btn.dataset.lang));
-});
-
+document.querySelectorAll('.mark-done-btn').forEach(btn=>{btn.addEventListener('click',()=>markDone(btn));});
+document.querySelectorAll('.quiz-btn').forEach(btn=>{btn.addEventListener('click',()=>startCfcQuiz(btn.dataset.lang));});
 function loadDoneStatus(){
   xpData.completedCourses.forEach(lang=>{
-    const btn=document.querySelector(`.mark-done-btn[data-lang="${lang}"]`);
-    if(!btn)return;
-    btn.style.display='none';
-    btn.closest('.course-card')?.classList.add('done');
-    const qb=btn.closest('.course-card')?.querySelector('.quiz-btn');
-    if(qb)qb.style.display='inline-flex';
+    const btn=document.querySelector(`.mark-done-btn[data-lang="${lang}"]`);if(!btn)return;
+    btn.style.display='none';btn.closest('.course-card')?.classList.add('done');
+    const qb=btn.closest('.course-card')?.querySelector('.quiz-btn');if(qb)qb.style.display='inline-flex';
   });
 }
 loadDoneStatus();
@@ -1291,9 +1178,7 @@ const pyQs=[
   {q:"Which module handles regular expressions?",opts:["regex","re","regexp","pattern"],a:1},
   {q:"What does pip do?",opts:["Python package installer","Python interpreter","Print function","None"],a:0}
 ];
-
 let cfcLang='',cfcIdx=0,cfcScore=0,cfcSel=null;
-
 function startCfcQuiz(lang){
   cfcLang=lang;cfcIdx=0;cfcScore=0;cfcSel=null;
   document.getElementById('m-quiz-title').textContent='Python Mastery Quiz — 30 Questions';
@@ -1301,10 +1186,8 @@ function startCfcQuiz(lang){
   document.getElementById('m-next').style.display='block';
   document.getElementById('m-next').style.opacity='.4';
   document.getElementById('m-next').style.pointerEvents='none';
-  renderCfcQ();
-  openModal('m-quiz');
+  renderCfcQ();openModal('m-quiz');
 }
-
 function renderCfcQ(){
   const q=pyQs[cfcIdx];
   document.getElementById('m-qn').textContent=cfcIdx+1;
@@ -1316,13 +1199,11 @@ function renderCfcQ(){
   document.querySelectorAll('.m-opt').forEach(btn=>{
     btn.addEventListener('click',()=>{
       document.querySelectorAll('.m-opt').forEach(b=>b.classList.remove('sel'));
-      btn.classList.add('sel');
-      cfcSel=parseInt(btn.dataset.i);
+      btn.classList.add('sel');cfcSel=parseInt(btn.dataset.i);
       nextBtn.style.opacity='1';nextBtn.style.pointerEvents='auto';
     });
   });
 }
-
 document.getElementById('m-next').addEventListener('click',()=>{
   if(cfcSel===null)return;
   if(cfcSel===pyQs[cfcIdx].a)cfcScore++;
@@ -1333,36 +1214,105 @@ document.getElementById('m-next').addEventListener('click',()=>{
     document.getElementById('m-score').textContent=`${cfcScore}/30 (${pct}%)`;
     document.getElementById('m-msg').textContent=pct>=90?'🏆 Outstanding! You are job-ready.':pct>=70?'🎉 Great work! Review a few topics.':pct>=50?'👍 Good effort. Revisit the playlist.':'💪 Keep learning — you\'ve got this!';
     document.getElementById('m-result').style.display='block';
-    document.getElementById('m-opts').innerHTML='';
-    document.getElementById('m-qtext').innerHTML='';
+    document.getElementById('m-opts').innerHTML='';document.getElementById('m-qtext').innerHTML='';
     document.getElementById('m-next').style.display='none';
     addXP(pct,'quiz completed');
   }
 });
-
 document.getElementById('quiz-close').addEventListener('click',()=>closeModal('m-quiz'));
 document.getElementById('quiz-done-btn').addEventListener('click',()=>closeModal('m-quiz'));
 document.getElementById('quiz-restart-btn').addEventListener('click',()=>startCfcQuiz(cfcLang));
 
 /* ═══════════════════════════════════════
+   ★ MULTILINGUAL TEXT PROCESSING ENGINE ★
+   Supports Arabic (RTL) + English (LTR)
+═══════════════════════════════════════ */
+
+/** Detect if text is predominantly Arabic */
+function isArabicText(text) {
+  const arabicChars = (text.match(/[\u0600-\u06FF]/g) || []).length;
+  const totalAlpha = (text.match(/[a-zA-Z\u0600-\u06FF]/g) || []).length;
+  return totalAlpha > 0 && (arabicChars / totalAlpha) > 0.4;
+}
+
+/** Arabic stopwords */
+const AR_SW = new Set('في من إلى على أن هذا هذه ذلك تلك كان كانت يكون ما مع عن أو لا لم لن قد كل كما أيضاً حتى بعد قبل عند هو هي هم هن نحن أنت أنا التي الذي الذين اللذان اللتان وقد وكان فإن فقد ثم أما إذا كيف لأن حين منذ خلال عبر بين وفي وعلى ومن وإلى إن أي بل لكن لكي كي لو لولا حيث وهو وهي وهم أنه أنها أنهم أننا هذان هاتان هؤلاء أولئك ليس لست والتي والذي يتم تم بما وما فما لما فأن ولا فلا وإن فإذا كذلك ولكن مما وكل إنه إنها إنهم إننا إنك إني إنكم إنكن أنكم أنكن إلا غير سوى بعض'.split(' '));
+
+/** English stopwords */
+const EN_SW = new Set('the is in and to a of for on with by it as this that an be are or at from was were has have had not but they we you he she its their our will can all when which who what how more also been into do about so up if no than then these those some such other there'.split(' '));
+
+/** Tokenize text — handles Arabic and English */
+function tokenizeText(text, isAr) {
+  if (isAr) {
+    // Extract Arabic word tokens, remove diacritics/tatweel
+    return text
+      .replace(/[\u064B-\u065F\u0640]/g, '') // strip harakat + tatweel
+      .replace(/[^\u0600-\u06FF\s]/g, ' ')    // keep only Arabic + spaces
+      .split(/\s+/)
+      .filter(w => w.length >= 2);
+  }
+  return text.replace(/[^a-zA-Z0-9 ]/g, ' ').toLowerCase().split(/\s+/).filter(Boolean);
+}
+
+/** Split text into sentences — handles Arabic punctuation */
+function splitSentences(text, isAr) {
+  if (isAr) {
+    // Arabic sentence delimiters: . ! ? ؟ and newlines
+    const raw = text.match(/[^.!?؟\n]+[.!?؟\n]?/g) || [text];
+    return raw.map(s => s.trim()).filter(s => s.length > 8);
+  }
+  const raw = text.match(/[^.!?]+[.!?]+/g) || [text];
+  return raw.map(s => s.trim()).filter(s => s.length > 20);
+}
+
+/** Get word frequency map, excluding stopwords */
+function wordFrequency(text, isAr) {
+  const sw = isAr ? AR_SW : EN_SW;
+  const minLen = isAr ? 2 : 3;
+  const tokens = tokenizeText(text, isAr);
+  const freq = {};
+  tokens.forEach(w => {
+    const wl = isAr ? w : w.toLowerCase();
+    if (wl.length >= minLen && !sw.has(wl)) {
+      freq[wl] = (freq[wl] || 0) + 1;
+    }
+  });
+  return freq;
+}
+
+/** Score sentences by keyword frequency */
+function scoreSentences(sentences, freq, isAr) {
+  return sentences.map(s => {
+    const tokens = tokenizeText(s, isAr);
+    let score = 0;
+    tokens.forEach(w => {
+      const wl = isAr ? w : w.toLowerCase();
+      if (freq[wl]) score += freq[wl];
+    });
+    return { s: s.trim(), score };
+  });
+}
+
+/** Apply RTL direction to an element */
+function applyDir(el, isAr) {
+  el.style.direction = isAr ? 'rtl' : 'ltr';
+  el.style.textAlign = isAr ? 'right' : 'left';
+  if (isAr) el.style.fontFamily = "'Outfit', 'Noto Naskh Arabic', serif";
+}
+
+/* ═══════════════════════════════════════
    GRADES
 ═══════════════════════════════════════ */
 let subjects=JSON.parse(localStorage.getItem('learnai-subs')||'[]');
-
 function gcls(g){return g>=90?'gA':g>=75?'gB':g>=60?'gC':g>=50?'gD':'gF';}
 function glbl(g){return g>=90?'A':g>=75?'B':g>=60?'C':g>=50?'D':'F';}
-
 function renderSubs(){
-  const el=document.getElementById('grades-list');
-  el.innerHTML='';
+  const el=document.getElementById('grades-list');el.innerHTML='';
   if(!subjects.length){
     el.innerHTML='<div class="empty"><div class="e-ico">📚</div>No subjects yet — add one below</div>';
     document.getElementById('stats-sec').style.display='none';
-    document.getElementById('hs-avg').textContent='—';
-    document.getElementById('hs-subs').textContent='0';
-    document.getElementById('hs-best').textContent='—';
-    document.getElementById('hs-hrs').textContent='0h';
-    return;
+    document.getElementById('hs-avg').textContent='—';document.getElementById('hs-subs').textContent='0';
+    document.getElementById('hs-best').textContent='—';document.getElementById('hs-hrs').textContent='0h';return;
   }
   subjects.forEach((s,i)=>{
     const d=document.createElement('div');d.className='sub-row';
@@ -1372,7 +1322,6 @@ function renderSubs(){
   });
   updateStats();
 }
-
 function updateStats(){
   const sec=document.getElementById('stats-sec');
   if(!subjects.length){sec.style.display='none';return;}
@@ -1391,24 +1340,17 @@ function updateStats(){
     <div class="stat-box"><div class="stat-val" style="background:linear-gradient(135deg,var(--danger),var(--warn));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">${worst.n.substring(0,8)}</div><div class="stat-lbl">Focus Here</div></div>`;
   buildSchedule(avg);
 }
-
 document.getElementById('add-sub-btn').addEventListener('click',addSubject);
 document.getElementById('new-sub').addEventListener('keydown',e=>{if(e.key==='Enter')addSubject();});
-
 function addSubject(){
   const n=document.getElementById('new-sub').value.trim();
   const g=parseInt(document.getElementById('new-grade').value);
   const d=parseInt(document.getElementById('new-diff').value);
   if(!n||isNaN(g)||g<0||g>100){showToast('Enter a valid subject and grade (0–100)','warn');return;}
-  subjects.push({n,g,d});
-  localStorage.setItem('learnai-subs',JSON.stringify(subjects));
-  document.getElementById('new-sub').value='';
-  document.getElementById('new-grade').value='';
-  renderSubs();
-  addXP(10,'subject added');
-  showToast(n+' added!','success');
+  subjects.push({n,g,d});localStorage.setItem('learnai-subs',JSON.stringify(subjects));
+  document.getElementById('new-sub').value='';document.getElementById('new-grade').value='';
+  renderSubs();addXP(10,'subject added');showToast(n+' added!','success');
 }
-
 const TIERS=[
   {id:'critical',lbl:'Critical — Intensive Recovery',max:50,range:'0–49',em:'🚨',col:'var(--danger)',raw:'rgba(248,113,113,.7)',bdr:'rgba(248,113,113,.3)',bg:'rgba(248,113,113,.04)',wh:14,
    sched:[{d:'Monday',f:'Concept re-learning (videos)',t:'2h'},{d:'Tuesday',f:'Worked examples',t:'2h'},{d:'Wednesday',f:'Flashcard drills',t:'2h'},{d:'Thursday',f:'Past exam questions',t:'2h'},{d:'Friday',f:'Tutoring / peer study',t:'2h'},{d:'Saturday',f:'Full topic review',t:'2h'},{d:'Sunday',f:'Rest + light flashcards',t:'30min'}],
@@ -1420,7 +1362,6 @@ const TIERS=[
    sched:[{d:'Monday',f:'Teach a concept or write notes',t:'1h'},{d:'Wednesday',f:'Advanced / extension material',t:'1h'},{d:'Friday',f:'Spaced repetition flashcards',t:'15min'},{d:'Saturday',f:'Challenge / competition problem',t:'1h'},{d:'Sunday',f:'Rest',t:'—'}],
    str:['🧑‍🏫 Solidify mastery by teaching others — tutor a classmate.','🚀 Explore enrichment: research papers, open courses, competitions.','🔄 Maintain with spaced repetition (15 min/day) not long sessions.','🏅 Set a stretch goal: aim for the top 1% on practice exams.','🌐 Apply knowledge to real-world projects.']}
 ];
-
 let chartInst;
 function buildSchedule(avg){
   const groups={critical:[],building:[],mastery:[]};
@@ -1454,7 +1395,6 @@ function buildSchedule(avg){
   chartInst=new Chart(ctx,{type:'bar',plugins:[zoneBg],data:{labels:lbls,datasets:[{label:'Grade (%)',data,backgroundColor:cols,borderRadius:8,order:1},{label:'Average',data:subjects.map(()=>avg),type:'line',borderColor:'rgba(124,106,247,.5)',backgroundColor:'transparent',borderDash:[6,4],pointRadius:0,order:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#6b6b80',font:{family:'Outfit'}}}},scales:{y:{beginAtZero:true,max:100,grid:{color:'rgba(255,255,255,.04)'},ticks:{color:v=>{const n=v.tick.value;return n<=50?'#f87171':n<=80?'#fbbf24':'#4ade80';}}},x:{grid:{display:false},ticks:{color:'#6b6b80'}}}}});
   buildAITips(avg);
 }
-
 function buildAITips(avg){
   const cr=subjects.filter(s=>s.g<50),bu=subjects.filter(s=>s.g>=50&&s.g<80),ma=subjects.filter(s=>s.g>=80);
   const tips=[];
@@ -1467,176 +1407,296 @@ function buildAITips(avg){
 renderSubs();
 
 /* ═══════════════════════════════════════
-   SUMMARIZER
+   SUMMARIZER — Arabic + English
 ═══════════════════════════════════════ */
-document.getElementById('sum-btn').addEventListener('click',doSummarize);
-document.getElementById('sum-clear').addEventListener('click',()=>{
-  document.getElementById('sum-in').value='';
-  document.getElementById('sum-out').innerHTML='';
-  document.getElementById('sum-terms').innerHTML='';
-  document.getElementById('sum-card').style.display='none';
+document.getElementById('sum-btn').addEventListener('click', doSummarize);
+document.getElementById('sum-clear').addEventListener('click', () => {
+  document.getElementById('sum-in').value = '';
+  document.getElementById('sum-out').innerHTML = '';
+  document.getElementById('sum-terms').innerHTML = '';
+  document.getElementById('sum-card').style.display = 'none';
 });
 
-function doSummarize(){
-  const text=document.getElementById('sum-in').value.trim();
-  if(!text){showToast('Paste some text first.','warn');return;}
-  const wc=text.split(/\s+/).filter(Boolean).length,rt=Math.ceil(wc/200);
-  const sents=text.match(/[^.!?]+[.!?]+/g)||[text];
-  const sw=new Set('the is in and to a of for on with by it as this that an be are or at from was were has have had not but they we you he she its their our will can all when which who what how more also been into do about so up if no than then these those some such other there'.split(' '));
-  const freq={};
-  sents.forEach(s=>s.toLowerCase().replace(/[^a-z0-9 ]/g,'').split(' ').forEach(w=>{if(w.length>3&&!sw.has(w))freq[w]=(freq[w]||0)+1;}));
-  const scored=sents.map(s=>{let sc=0;s.toLowerCase().replace(/[^a-z0-9 ]/g,'').split(' ').forEach(w=>{if(freq[w])sc+=freq[w];});return{s:s.trim(),sc};});
-  const n=Math.min(Math.max(3,Math.floor(sents.length*.3)),7);
-  const top=[...scored].sort((a,b)=>b.sc-a.sc).slice(0,n);
-  top.sort((a,b)=>sents.findIndex(s=>s.trim()===a.s)-sents.findIndex(s=>s.trim()===b.s));
-  document.getElementById('sum-out').innerHTML=top.map(x=>x.s).join(' ');
-  const terms=Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,14);
-  document.getElementById('sum-terms').innerHTML=terms.map(([w])=>`<span class="term">${w}</span>`).join('');
-  document.getElementById('sum-stats').textContent=`${wc} words · ${sents.length} sentences · ~${rt} min read · Reduced to ${top.length} sentences`;
-  document.getElementById('sum-card').style.display='block';
-  addXP(15,'lesson summarized');
-  showToast('Summary ready!','success');
+function doSummarize() {
+  const text = document.getElementById('sum-in').value.trim();
+  if (!text) { showToast('Paste some text first.', 'warn'); return; }
+
+  const isAr = isArabicText(text);
+  const sents = splitSentences(text, isAr);
+  const freq = wordFrequency(text, isAr);
+  const scored = scoreSentences(sents, freq, isAr);
+
+  // Pick top sentences (30% of total, min 3, max 7)
+  const n = Math.min(Math.max(3, Math.floor(sents.length * 0.3)), 7);
+  const top = [...scored].sort((a, b) => b.score - a.score).slice(0, n);
+  // Re-order by original position
+  top.sort((a, b) => sents.findIndex(s => s.trim() === a.s) - sents.findIndex(s => s.trim() === b.s));
+
+  const sumOut = document.getElementById('sum-out');
+  sumOut.textContent = top.map(x => x.s).join(isAr ? ' ' : ' ');
+  applyDir(sumOut, isAr);
+
+  // Key terms
+  const terms = Object.entries(freq).sort((a, b) => b[1] - a[1]).slice(0, 14);
+  const termsEl = document.getElementById('sum-terms');
+  termsEl.innerHTML = terms.map(([w]) => `<span class="term">${w}</span>`).join('');
+  applyDir(termsEl, isAr);
+
+  // Stats
+  const wc = text.split(/\s+/).filter(Boolean).length;
+  const rt = Math.ceil(wc / (isAr ? 180 : 200));
+  document.getElementById('sum-stats').textContent =
+    `${wc} ${isAr ? 'كلمة' : 'words'} · ${sents.length} ${isAr ? 'جملة' : 'sentences'} · ~${rt} ${isAr ? 'دقيقة قراءة' : 'min read'} · ${isAr ? 'تم اختصارها إلى' : 'Reduced to'} ${top.length} ${isAr ? 'جمل' : 'sentences'}`;
+
+  // Language badge
+  document.getElementById('sum-lang-badge').innerHTML =
+    isAr ? '<div class="lang-badge">🌐 Arabic detected — RTL mode</div>' : '';
+
+  document.getElementById('sum-card').style.display = 'block';
+  addXP(15, 'lesson summarized');
+  showToast(isAr ? 'تم إنشاء الملخص! ✨' : 'Summary ready!', 'success');
 }
 
 /* ═══════════════════════════════════════
-   QUIZ (AI-generated)
+   QUIZ (AI-generated) — Arabic + English
 ═══════════════════════════════════════ */
-let qxQs=[],qxIdx=0,qxSc=0,qxAns=false;
+let qxQs = [], qxIdx = 0, qxSc = 0, qxAns = false, qxIsAr = false;
 
-document.getElementById('quiz-gen-btn').addEventListener('click',genQuiz);
-document.getElementById('qx-next').addEventListener('click',qxNext);
+document.getElementById('quiz-gen-btn').addEventListener('click', genQuiz);
+document.getElementById('qx-next').addEventListener('click', qxNext);
 
-function genQuiz(){
-  const text=document.getElementById('qx-in').value.trim();
-  if(text.split(/\s+/).length<20){showToast('Enter at least a few sentences.','warn');return;}
-  const sents=(text.match(/[^.!?]+[.!?]+/g)||[text]).filter(s=>s.trim().length>30);
-  const sw=new Set('the is in and to a of for on with by it as this that an be are or at was were has have had but they we you he she its their our will can all when which who what how more also been into do about so up than then there'.split(' '));
-  qxQs=[];
-  sents.slice(0,10).forEach(sent=>{
-    const tr=sent.trim();if(tr.length<30)return;
-    const words=tr.replace(/[^a-zA-Z0-9 ]/g,'').split(' ').filter(w=>w.length>4&&!sw.has(w.toLowerCase()));
-    if(words.length<2)return;
-    const aw=words[Math.floor(Math.random()*words.length)];
-    const q=sent.replace(new RegExp('\\b'+aw+'\\b','i'),'______');
-    const all=text.replace(/[^a-zA-Z ]/g,'').split(' ').filter(w=>w.length>4&&!sw.has(w.toLowerCase())&&w.toLowerCase()!==aw.toLowerCase());
-    const sh=arr=>[...arr].sort(()=>Math.random()-.5);
-    const dis=sh([...new Set(all)]).slice(0,3);
-    const opts=sh([aw,...dis]).slice(0,4);
-    if(opts.length>=2)qxQs.push({q,a:aw,opts});
+function genQuiz() {
+  const text = document.getElementById('qx-in').value.trim();
+  if (text.split(/\s+/).length < 15) {
+    showToast(isArabicText(text) ? 'أضف نصاً أطول من 15 كلمة' : 'Enter at least a few sentences.', 'warn');
+    return;
+  }
+
+  qxIsAr = isArabicText(text);
+  const sents = splitSentences(text, qxIsAr);
+  const freq = wordFrequency(text, qxIsAr);
+  const sw = qxIsAr ? AR_SW : EN_SW;
+  const minLen = qxIsAr ? 2 : 4;
+
+  qxQs = [];
+
+  sents.slice(0, 12).forEach(sent => {
+    if (sent.trim().length < (qxIsAr ? 10 : 30)) return;
+
+    // Pick keyword: high-frequency content word from this sentence
+    const tokens = tokenizeText(sent, qxIsAr);
+    const contentWords = tokens.filter(w => {
+      const wl = qxIsAr ? w : w.toLowerCase();
+      return wl.length >= minLen && !sw.has(wl) && freq[wl] >= 1;
+    });
+
+    if (contentWords.length < 1) return;
+
+    // Pick the most frequent content word as the answer
+    const aw = contentWords.sort((a, b) => (freq[qxIsAr ? b : b.toLowerCase()] || 0) - (freq[qxIsAr ? a : a.toLowerCase()] || 0))[0];
+    if (!aw) return;
+
+    // Build blank question
+    const awEsc = aw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const q = sent.replace(new RegExp(awEsc, qxIsAr ? 'u' : 'iu'), '______');
+    if (q === sent) return; // word not found (shouldn't happen)
+
+    // Build distractors from other high-frequency content words
+    const allWords = tokenizeText(text, qxIsAr)
+      .filter(w => {
+        const wl = qxIsAr ? w : w.toLowerCase();
+        return wl.length >= minLen && !sw.has(wl) && w !== aw &&
+          (qxIsAr ? w : w.toLowerCase()) !== (qxIsAr ? aw : aw.toLowerCase());
+      });
+    const unique = [...new Set(allWords)];
+    const shuffled = unique.sort(() => Math.random() - 0.5);
+    const distractors = shuffled.slice(0, 3);
+
+    if (distractors.length < 1) return;
+
+    const opts = [aw, ...distractors].sort(() => Math.random() - 0.5).slice(0, 4);
+    if (opts.length >= 2) {
+      qxQs.push({ q, a: aw, opts, isAr: qxIsAr });
+    }
   });
-  if(!qxQs.length){showToast("Couldn't extract questions. Try more detailed text.",'warn');return;}
-  qxIdx=0;qxSc=0;qxAns=false;
-  document.getElementById('qx-area').style.display='block';
-  document.getElementById('qx-result').style.display='none';
+
+  if (!qxQs.length) {
+    showToast(qxIsAr ? 'لم يتمكن النظام من استخراج أسئلة — جرب نصاً أطول أو أكثر تفصيلاً' : "Couldn't extract questions. Try more detailed text.", 'warn');
+    return;
+  }
+
+  qxIdx = 0; qxSc = 0; qxAns = false;
+  document.getElementById('qx-area').style.display = 'block';
+  document.getElementById('qx-result').style.display = 'none';
   renderQxQ();
 }
 
-function renderQxQ(){
-  if(qxIdx>=qxQs.length){showQxResult();return;}
-  qxAns=false;
-  const q=qxQs[qxIdx];
-  document.getElementById('qx-score').textContent=`Question ${qxIdx+1} of ${qxQs.length} · Score: ${qxSc}`;
-  document.getElementById('qx-next').style.display='none';
-  document.getElementById('qx-q-wrap').innerHTML=`<div class="qx-q">Fill in the blank: <em>${q.q}</em></div><div class="qx-opts" id="qx-opts-wrap"></div>`;
-  const wrap=document.getElementById('qx-opts-wrap');
-  q.opts.forEach(o=>{
-    const btn=document.createElement('button');btn.className='qx-opt';btn.textContent=o;
-    btn.addEventListener('click',()=>checkQx(btn,o,q.a));
+function renderQxQ() {
+  if (qxIdx >= qxQs.length) { showQxResult(); return; }
+  qxAns = false;
+  const q = qxQs[qxIdx];
+  const isAr = q.isAr;
+
+  document.getElementById('qx-score').textContent =
+    isAr ? `السؤال ${qxIdx + 1} من ${qxQs.length} · النتيجة: ${qxSc}` :
+            `Question ${qxIdx + 1} of ${qxQs.length} · Score: ${qxSc}`;
+
+  document.getElementById('qx-next').style.display = 'none';
+
+  const qWrap = document.getElementById('qx-q-wrap');
+  qWrap.innerHTML = `
+    <div class="qx-q ${isAr ? 'rtl' : ''}">
+      ${isAr ? 'أكمل الفراغ: ' : 'Fill in the blank: '}<em>${q.q}</em>
+    </div>
+    <div class="qx-opts" id="qx-opts-wrap"></div>`;
+
+  const wrap = document.getElementById('qx-opts-wrap');
+  q.opts.forEach(o => {
+    const btn = document.createElement('button');
+    btn.className = `qx-opt ${isAr ? 'rtl' : ''}`;
+    btn.textContent = o;
+    btn.addEventListener('click', () => checkQx(btn, o, q.a));
     wrap.appendChild(btn);
   });
 }
 
-function checkQx(btn,chosen,correct){
-  if(qxAns)return;qxAns=true;
-  document.querySelectorAll('.qx-opt').forEach(b=>{
-    if(b.textContent===correct)b.classList.add('correct');
-    else if(b===btn&&chosen!==correct)b.classList.add('wrong');
-    b.disabled=true;
+function checkQx(btn, chosen, correct) {
+  if (qxAns) return;
+  qxAns = true;
+  const isAr = qxQs[qxIdx].isAr;
+  document.querySelectorAll('.qx-opt').forEach(b => {
+    if (b.textContent === correct) b.classList.add('correct');
+    else if (b === btn && chosen !== correct) b.classList.add('wrong');
+    b.disabled = true;
   });
-  if(chosen===correct)qxSc++;
-  document.getElementById('qx-score').textContent=`Question ${qxIdx+1} of ${qxQs.length} · Score: ${qxSc}`;
-  document.getElementById('qx-next').style.display='inline-flex';
+  if (chosen === correct) qxSc++;
+  document.getElementById('qx-score').textContent =
+    isAr ? `السؤال ${qxIdx + 1} من ${qxQs.length} · النتيجة: ${qxSc}` :
+            `Question ${qxIdx + 1} of ${qxQs.length} · Score: ${qxSc}`;
+  document.getElementById('qx-next').style.display = 'inline-flex';
 }
 
-function qxNext(){qxIdx++;if(qxIdx>=qxQs.length)showQxResult();else renderQxQ();}
+function qxNext() { qxIdx++; if (qxIdx >= qxQs.length) showQxResult(); else renderQxQ(); }
 
-function showQxResult(){
-  const pct=Math.round(qxSc/qxQs.length*100);
-  const msg=pct>=80?'🎉 Excellent!':pct>=60?'👍 Good effort!':'📚 Keep studying!';
-  document.getElementById('qx-q-wrap').innerHTML='';
-  document.getElementById('qx-next').style.display='none';
-  document.getElementById('qx-result').innerHTML=`${msg} You scored <strong>${qxSc}/${qxQs.length}</strong> (${pct}%). <br><br><button class="btn btn-secondary btn-sm" id="qx-retry">Try Again</button>`;
-  document.getElementById('qx-result').style.display='block';
-  document.getElementById('qx-retry')?.addEventListener('click',genQuiz);
-  addXP(pct/2|0,'quiz completed');
+function showQxResult() {
+  const pct = Math.round(qxSc / qxQs.length * 100);
+  const isAr = qxIsAr;
+  const msgs = isAr
+    ? {90:'🎉 ممتاز! أداء رائع جداً!', 60:'👍 عمل جيد! راجع بعض المواضيع.', 0:'📚 استمر في الدراسة!'}
+    : {90:'🎉 Excellent!', 60:'👍 Good effort!', 0:'📚 Keep studying!'};
+  const msg = pct >= 90 ? msgs[90] : pct >= 60 ? msgs[60] : msgs[0];
+
+  document.getElementById('qx-q-wrap').innerHTML = '';
+  document.getElementById('qx-next').style.display = 'none';
+  const resultEl = document.getElementById('qx-result');
+  resultEl.innerHTML = `${msg} ${isAr ? 'حصلت على' : 'You scored'} <strong>${qxSc}/${qxQs.length}</strong> (${pct}%). <br><br><button class="btn btn-secondary btn-sm" id="qx-retry">${isAr ? 'حاول مرة أخرى' : 'Try Again'}</button>`;
+  resultEl.style.display = 'block';
+  if (isAr) applyDir(resultEl, true);
+  document.getElementById('qx-retry')?.addEventListener('click', genQuiz);
+  addXP(pct / 2 | 0, 'quiz completed');
 }
 
 /* ═══════════════════════════════════════
-   FLASHCARDS
+   FLASHCARDS — Arabic + English
 ═══════════════════════════════════════ */
-let fcs=[],fcI=0;
+let fcs = [], fcI = 0, fcIsAr = false;
 
-document.getElementById('fc-gen-btn').addEventListener('click',genFlashcards);
-document.getElementById('fc-scene').addEventListener('click',flipFC);
-document.getElementById('fc-prev').addEventListener('click',fcPrev);
-document.getElementById('fc-next').addEventListener('click',fcNext);
+document.getElementById('fc-gen-btn').addEventListener('click', genFlashcards);
+document.getElementById('fc-scene').addEventListener('click', flipFC);
+document.getElementById('fc-prev').addEventListener('click', fcPrev);
+document.getElementById('fc-next').addEventListener('click', fcNext);
 
-function genFlashcards(){
-  const text=document.getElementById('fc-in').value.trim();
-  if(!text){showToast('Paste some content first.','warn');return;}
-  fcs=[];
-  const sw=new Set('the is in and to a of for on with by it as this that an be are or at was were has have had but they we you he she its their our will can all when which who what how more also been into do about so up than then there'.split(' '));
-  (text.match(/[^.!?]+[.!?]+/g)||[text]).forEach(sent=>{
-    const tr=sent.trim();if(tr.length<30)return;
-    const words=tr.replace(/[^a-zA-Z0-9 ]/g,'').split(' ').filter(w=>w.length>4&&!sw.has(w.toLowerCase()));
-    if(words.length<2)return;
-    const kw=words[Math.floor(Math.random()*Math.min(3,words.length))];
-    fcs.push({f:kw[0].toUpperCase()+kw.slice(1),b:tr});
+function genFlashcards() {
+  const text = document.getElementById('fc-in').value.trim();
+  if (!text) { showToast('Paste some content first.', 'warn'); return; }
+
+  fcIsAr = isArabicText(text);
+  const sw = fcIsAr ? AR_SW : EN_SW;
+  const minLen = fcIsAr ? 2 : 4;
+  const sents = splitSentences(text, fcIsAr);
+  const freq = wordFrequency(text, fcIsAr);
+
+  fcs = [];
+
+  sents.forEach(sent => {
+    if (sent.trim().length < (fcIsAr ? 10 : 30)) return;
+
+    const tokens = tokenizeText(sent, fcIsAr);
+    // Get content words sorted by frequency
+    const contentWords = tokens
+      .filter(w => {
+        const wl = fcIsAr ? w : w.toLowerCase();
+        return wl.length >= minLen && !sw.has(wl);
+      })
+      .sort((a, b) => {
+        const fa = freq[fcIsAr ? a : a.toLowerCase()] || 0;
+        const fb = freq[fcIsAr ? b : b.toLowerCase()] || 0;
+        return fb - fa;
+      });
+
+    if (contentWords.length < 1) return;
+
+    const kw = contentWords[0];
+    const display = kw.charAt(0).toUpperCase() + kw.slice(1);
+    fcs.push({ f: display, b: sent.trim(), isAr: fcIsAr });
   });
-  if(!fcs.length){showToast('Could not extract flashcards.','warn');return;}
-  fcI=0;
-  document.getElementById('fc-area').style.display='block';
+
+  if (!fcs.length) {
+    showToast(fcIsAr ? 'لم يتمكن النظام من استخراج بطاقات — جرب نصاً أطول' : 'Could not extract flashcards.', 'warn');
+    return;
+  }
+
+  fcI = 0;
+  document.getElementById('fc-area').style.display = 'block';
   renderFC();
-  showToast(fcs.length+' flashcards created!','success');
-  addXP(20,'flashcards created');
+  showToast(fcIsAr ? `تم إنشاء ${fcs.length} بطاقة!` : `${fcs.length} flashcards created!`, 'success');
+  addXP(20, 'flashcards created');
 }
 
-function renderFC(){
+function renderFC() {
   document.getElementById('fc-card').classList.remove('flipped');
-  document.getElementById('fc-front-txt').textContent=fcs[fcI].f;
-  document.getElementById('fc-back-txt').textContent=fcs[fcI].b;
-  document.getElementById('fc-ctr').textContent=`${fcI+1} / ${fcs.length}`;
-  document.getElementById('fc-prog').style.width=((fcI+1)/fcs.length*100)+'%';
-}
-function flipFC(){document.getElementById('fc-card').classList.toggle('flipped');}
-function fcNext(){fcI=(fcI+1)%fcs.length;renderFC();}
-function fcPrev(){fcI=(fcI-1+fcs.length)%fcs.length;renderFC();}
+  const card = fcs[fcI];
+  const isAr = card.isAr;
 
-document.addEventListener('keydown',e=>{
-  if(!document.getElementById('page-flashcards').classList.contains('active'))return;
-  if(e.key==='ArrowRight')fcNext();
-  else if(e.key==='ArrowLeft')fcPrev();
-  else if(e.key===' '){e.preventDefault();flipFC();}
+  const frontTxt = document.getElementById('fc-front-txt');
+  const backTxt = document.getElementById('fc-back-txt');
+
+  frontTxt.textContent = card.f;
+  backTxt.textContent = card.b;
+
+  // Apply RTL for Arabic
+  [frontTxt, backTxt].forEach(el => {
+    el.classList.toggle('rtl', isAr);
+    applyDir(el, isAr);
+  });
+
+  document.getElementById('fc-ctr').textContent = `${fcI + 1} / ${fcs.length}`;
+  document.getElementById('fc-prog').style.width = ((fcI + 1) / fcs.length * 100) + '%';
+}
+
+function flipFC() { document.getElementById('fc-card').classList.toggle('flipped'); }
+function fcNext() { fcI = (fcI + 1) % fcs.length; renderFC(); }
+function fcPrev() { fcI = (fcI - 1 + fcs.length) % fcs.length; renderFC(); }
+
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('page-flashcards').classList.contains('active')) return;
+  if (e.key === 'ArrowRight') fcNext();
+  else if (e.key === 'ArrowLeft') fcPrev();
+  else if (e.key === ' ') { e.preventDefault(); flipFC(); }
 });
 
 /* ═══════════════════════════════════════
    GOALS
 ═══════════════════════════════════════ */
 let goals=JSON.parse(localStorage.getItem('learnai-goals')||'[]');
-
 document.getElementById('add-goal-btn').addEventListener('click',addGoal);
 document.getElementById('new-goal').addEventListener('keydown',e=>{if(e.key==='Enter')addGoal();});
-
 function addGoal(){
   const t=document.getElementById('new-goal').value.trim();
   if(!t){showToast('Enter a goal.','warn');return;}
-  goals.push({t,done:false});
-  localStorage.setItem('learnai-goals',JSON.stringify(goals));
-  document.getElementById('new-goal').value='';
-  renderGoals();
-  addXP(5,'goal added');
+  goals.push({t,done:false});localStorage.setItem('learnai-goals',JSON.stringify(goals));
+  document.getElementById('new-goal').value='';renderGoals();addXP(5,'goal added');
 }
-
 function renderGoals(){
   const el=document.getElementById('goals-list');el.innerHTML='';
   if(!goals.length){el.innerHTML='<div class="empty"><div class="e-ico">🎯</div>No goals yet!</div>';document.getElementById('goals-div').style.display='none';document.getElementById('goals-sum').style.display='none';return;}
@@ -1652,13 +1712,7 @@ function renderGoals(){
   document.getElementById('goals-sum').style.display='block';
   document.getElementById('goals-sum').innerHTML=`${done}/${goals.length} completed (${pct}%)<div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>`;
 }
-
-function toggleGoal(i){
-  if(!goals[i].done)addXP(25,'goal completed 🎯');
-  goals[i].done=!goals[i].done;
-  localStorage.setItem('learnai-goals',JSON.stringify(goals));
-  renderGoals();
-}
+function toggleGoal(i){if(!goals[i].done)addXP(25,'goal completed 🎯');goals[i].done=!goals[i].done;localStorage.setItem('learnai-goals',JSON.stringify(goals));renderGoals();}
 function rmGoal(i){goals.splice(i,1);localStorage.setItem('learnai-goals',JSON.stringify(goals));renderGoals();}
 renderGoals();
 
@@ -1668,10 +1722,8 @@ renderGoals();
 let pomStats=JSON.parse(localStorage.getItem('learnai-pom')||'{"s":0,"m":0,"d":""}');
 const TODAY=new Date().toDateString();
 if(pomStats.d!==TODAY){pomStats={s:0,m:0,d:TODAY};localStorage.setItem('learnai-pom',JSON.stringify(pomStats));}
-
 let pomInt=null,pomOn=false,pomSecs=25*60,pomWork=true,pomDone=0;
 const CIRCUM=490.09;
-
 function pomUpdate(){
   const m=String(Math.floor(pomSecs/60)).padStart(2,'0'),s=String(pomSecs%60).padStart(2,'0');
   document.getElementById('pom-disp').textContent=`${m}:${s}`;
@@ -1679,10 +1731,8 @@ function pomUpdate(){
   const tot=pomWork?parseInt(document.getElementById('pom-w').value)*60:parseInt(document.getElementById('pom-b').value)*60;
   document.getElementById('pom-ring').style.strokeDashoffset=CIRCUM*(1-pomSecs/tot);
 }
-
 document.getElementById('pom-start').addEventListener('click',pomToggle);
 document.getElementById('pom-reset').addEventListener('click',pomReset);
-
 function pomToggle(){
   if(pomOn){clearInterval(pomInt);pomOn=false;document.getElementById('pom-start').textContent='▶ Resume';}
   else{
@@ -1707,24 +1757,20 @@ function pomToggle(){
     },1000);
   }
 }
-
 function pomReset(){clearInterval(pomInt);pomOn=false;pomWork=true;pomSecs=parseInt(document.getElementById('pom-w').value)*60;document.getElementById('pom-mode').textContent='Focus';document.getElementById('pom-start').textContent='▶ Start';document.title='LearnAI';pomUpdate();}
 ['pom-w','pom-b'].forEach(id=>document.getElementById(id).addEventListener('change',pomReset));
 document.getElementById('pom-tot-s').textContent=pomStats.s;
 document.getElementById('pom-tot-m').textContent=pomStats.m;
 pomUpdate();
 
-
-
 /* ═══════════════════════════════════════
    WELCOME
 ═══════════════════════════════════════ */
-// ── SESSION RESTORE ──
 (function(){
   const isNew=!localStorage.getItem('learnai-visited');
   if(isNew){
     localStorage.setItem('learnai-visited','1');
-    setTimeout(()=>showToast('Welcome to LearnAI! 👋 Your progress saves automatically.','info'),1200);
+    setTimeout(()=>showToast('Welcome to LearnAI! 👋 Arabic & English supported 🌐','info'),1200);
   } else {
     const _xp=JSON.parse(localStorage.getItem('learnai-xp')||'{"xp":0,"completedCourses":[]}');
     const _subs=JSON.parse(localStorage.getItem('learnai-subs')||'[]').length;
@@ -1735,5 +1781,4 @@ pomUpdate();
 })();
 </script>
 </body>
-
 </html>
